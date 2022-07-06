@@ -1,0 +1,14 @@
+.not-found {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.not-found-message {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.err-404 {
+  font-size: 7rem;
+}
