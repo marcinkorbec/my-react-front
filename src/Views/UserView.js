@@ -3,19 +3,47 @@ import "./css/UserView.css"
 import {NotFoundView} from "./NotFoundView";
 import {useParams} from "react-router-dom";
 import {Loader} from "../components/Loader/Loader";
+import {config} from "../utils/config/config";
 
 export const UserView = () => {
+
 	const [user, setUser] = useState(null);
 	const {id} = useParams();
+	const [resultInfo, setResultInfo] = useState(null)
 
-	useEffect(()=> {
-		(async ()=> {
-			const res= await fetch(`https://gorest.co.in/public/v2/users/${id}`);
+
+	useEffect(() => {
+		(async () => {
+			const res = await fetch(`${config.apiUrl}${id}`);
 			const data = await res.json();
 			setUser(data);
 		})();
-	},[])
+	}, [])
 
+
+
+	const deleteUser = async (e) => {
+		e.preventDefault();
+
+		if (!window.confirm(`Are you sure to delete ${user.name}?`)) {
+			return;
+		}
+
+		const res = await fetch(`${config.apiUrl}${user.id}`, {
+			method: 'DELETE',
+			headers: {
+				'Authorization': config.token,
+			}
+
+		})
+
+		setResultInfo(`User was deleted.`);
+
+		if (res.status === 400 || res.status === 500) {
+			const error = await res.json();
+			alert(`Error occured: ${error.message}`)
+		}
+	}
 
 
 	if (user === null) {
@@ -26,6 +54,24 @@ export const UserView = () => {
 		return <NotFoundView/>
 	}
 
+	if (resultInfo !== null) {
+		return (
+			<div className="container">
+				<div className="added " id="chat-block">
+					<p><strong>{resultInfo}</strong></p>
+					<a href="/">
+						<button
+							className="title"
+							onClick={() => setResultInfo(null)}
+						>
+							Go back to the previous page
+						</button>
+					</a>
+				</div>
+			</div>
+		)
+	}
+
 	return (
 		<div className="container">
 			<div className="row">
@@ -33,8 +79,8 @@ export const UserView = () => {
 					<div className="profile-card">
 						<img src={
 							user.gender === "female"
-							? "https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-512.png"
-							: "https://www.shareicon.net/data/512x512/2015/09/18/103160_man_512x512.png"
+								? "https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-512.png"
+								: "https://www.shareicon.net/data/512x512/2015/09/18/103160_man_512x512.png"
 						}
 								 alt="user"
 								 className="profile-photo"/>
@@ -58,8 +104,10 @@ export const UserView = () => {
 					</ul>
 
 					<div id="chat-block">
-						<div className="title">Edit User</div>
-						<div className="title delete">Delete User</div>
+						<a href={`http://localhost:3000/user/update/${user.id}`}>
+							<button className="title">Edit User</button>
+						</a>
+						<button className="title delete" onClick={deleteUser}>Delete User</button>
 					</div>
 
 
