@@ -3,6 +3,7 @@ import {config} from "../../utils/config/config";
 
 export const TableRow = (props) => {
 
+
 	const deleteUser = async (e) => {
 		e.preventDefault();
 
@@ -22,6 +23,7 @@ export const TableRow = (props) => {
 			const error = await res.json();
 			alert(`Error occured: ${error.message}`)
 		}
+
 		props.onUsersChange();
 	}
 

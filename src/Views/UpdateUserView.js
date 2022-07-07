@@ -15,6 +15,7 @@ export const UpdateUserView = () => {
 		status: ''
 	});
 
+
 	useEffect(()=> {
 		(async ()=> {
 			const res= await fetch(`${config.apiUrl}${id}`);
@@ -23,8 +24,10 @@ export const UpdateUserView = () => {
 		})();
 	},[])
 
+
 	const [loading, setLoading] = useState(false);
 	const [resultInfo, setResultInfo] = useState(null)
+
 
 	const updateForm = (key, value) => {
 		setForm(form => ({
@@ -32,6 +35,7 @@ export const UpdateUserView = () => {
 			[key]: value,
 		}))
 	}
+
 
 	const sendForm = async (e) => {
 		e.preventDefault();
@@ -65,10 +69,11 @@ export const UpdateUserView = () => {
 		}
 	}
 
+
 	if (loading) {
 		return <Loader/>
-
 	}
+
 
 	if (resultInfo !== null) {
 		return (
@@ -81,6 +86,7 @@ export const UpdateUserView = () => {
 		)
 	}
 
+
 	if (user === null) {
 		return <Loader/>
 	}
@@ -88,6 +94,8 @@ export const UpdateUserView = () => {
 	if (user.message === "Resource not found") {
 		return <NotFoundView/>
 	}
+
+
 	return (
 		<div className="container">
 			<div className="row">

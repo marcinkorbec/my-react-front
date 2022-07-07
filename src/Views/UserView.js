@@ -21,7 +21,6 @@ export const UserView = () => {
 	}, [])
 
 
-
 	const deleteUser = async (e) => {
 		e.preventDefault();
 
@@ -46,6 +45,7 @@ export const UserView = () => {
 	}
 
 
+
 	if (user === null) {
 		return <Loader/>
 	}
@@ -53,6 +53,8 @@ export const UserView = () => {
 	if (user.message === "Resource not found") {
 		return <NotFoundView/>
 	}
+
+
 
 	if (resultInfo !== null) {
 		return (
@@ -109,7 +111,6 @@ export const UserView = () => {
 						</a>
 						<button className="title delete" onClick={deleteUser}>Delete User</button>
 					</div>
-
 
 				</div>
 			</div>

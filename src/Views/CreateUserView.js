@@ -38,10 +38,8 @@ export const CreateUserView = () => {
 
 			const data = await res.json();
 
-
 			setLoading(false);
 			setResultInfo(`${data.name} was added with ID: ${data.id}`);
-
 
 			if (res.status >= 400) {
 				alert(`An Error occured: ${data[0].field} ${data[0].message}`)
