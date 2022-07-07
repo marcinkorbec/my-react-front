@@ -1,0 +1,19 @@
+#add-user {
+  text-align: center;
+  background: #8dc63f;
+  padding: 2px 20px;
+  width: 70%;
+  height: 30px;
+  border-radius: 15px;
+  position: relative;
+  margin: 0 auto 20px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+}
+
+#add-user:hover {
+  cursor: pointer;
+  background: darkgray;
+}
