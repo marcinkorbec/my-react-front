@@ -1,0 +1,20 @@
+.header {
+  text-align: center;
+  background: white;
+  box-shadow: 0px 2px 6px #413e3e26;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 129;
+}
+
+h1, .mayeryn-logo {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+h1 {
+  font-size: 1.3rem;
+  margin-top: 10px
+}
