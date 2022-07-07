@@ -17,7 +17,6 @@ export const MainView = () => {
 	useEffect(() => {
 		refreshUsers();
 	}, [])
-	console.log(users)
 
 	if (users === null) {
 		return <Loader/>
@@ -58,7 +57,6 @@ export const MainView = () => {
 								</a>
 							</div>
 						</div>
-						<Loader/>
 					</div>
 				</div>
 			</div>

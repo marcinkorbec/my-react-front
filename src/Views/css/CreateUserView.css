@@ -1,0 +1,21 @@
+label {
+  width: 100%;
+}
+
+input, select {
+  border: none;
+  border-bottom: 1px solid #e0dada;
+}
+
+@media only screen and (min-width: 291px) {
+  input {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 426px) {
+  input, select {
+    width: 90%;
+  }
+}
+
