@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.css"
 
 export const Header = () => (
-	<a href="http://localhost:3000">
+	<a href="/">
 		<div className="header">
 			<h1>Special designed for: </h1>
 			<img

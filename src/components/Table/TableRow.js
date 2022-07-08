@@ -44,7 +44,7 @@ export const TableRow = (props) => {
 				<div className="candidate-list-details">
 					<div className="candidate-list-info">
 						<div className="candidate-list-title">
-							<h5 className="mb-0"><a href={`http://localhost:3000/user/${props.id}`}
+							<h5 className="mb-0"><a href={`/user/${props.id}`}
 							>{props.name}</a></h5>
 						</div>
 						<div className="candidate-list-option">
@@ -69,7 +69,7 @@ export const TableRow = (props) => {
 			<td>
 				<ul className="list-unstyled mb-0 d-flex justify-content-end">
 					<li><a
-						href={`http://localhost:3000/user/${props.id}`}
+						href={`/user/${props.id}`}
 						className="text-primary"
 						data-toggle="tooltip"
 						data-original-title="view"
@@ -77,7 +77,7 @@ export const TableRow = (props) => {
 						className="fa fa-eye"
 					/></a></li>
 					<li><a
-						href={`http://localhost:3000/user/update/${props.id}`}
+						href={`/user/update/${props.id}`}
 						className="text-info"
 						data-toggle="tooltip"
 						title=""

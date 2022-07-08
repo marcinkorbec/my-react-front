@@ -106,7 +106,7 @@ export const UserView = () => {
 					</ul>
 
 					<div id="chat-block">
-						<a href={`http://localhost:3000/user/update/${user.id}`}>
+						<a href={`/user/update/${user.id}`}>
 							<button className="title">Edit User</button>
 						</a>
 						<button className="title delete" onClick={deleteUser}>Delete User</button>

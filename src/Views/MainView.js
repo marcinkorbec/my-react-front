@@ -52,7 +52,7 @@ export const MainView = () => {
 						</table>
 						<div className="text-center mt-3 mt-sm-3">
 							<div id="chat-block">
-								<a href="http://localhost:3000/create-new-user">
+								<a href="/create-new-user">
 									<button  id="add-user">Add New User</button>
 								</a>
 							</div>
