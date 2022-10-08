@@ -6,3 +6,5 @@ Korzysta z publicznego API użytkowników https://gorest.co.in/
 W aplikacji możemy dodawać użytkowników:
 ![image](https://user-images.githubusercontent.com/62883259/194728474-c1b18a9d-4117-446e-96e0-2eac72bae585.png)
 
+Usuwać ich:
+![image](https://user-images.githubusercontent.com/62883259/194728535-49b803c5-c605-43ef-84a0-95e9ff087559.png)
