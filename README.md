@@ -9,3 +9,6 @@ W aplikacji możemy dodawać użytkowników:
 
 Usuwać ich:
 ![image](https://user-images.githubusercontent.com/62883259/194728535-49b803c5-c605-43ef-84a0-95e9ff087559.png)
+
+A także edytować:
+![image](https://user-images.githubusercontent.com/62883259/194728601-9b26cf75-a264-452d-8e22-cfa0a89b9f63.png)
