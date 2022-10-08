@@ -1,4 +1,4 @@
-Aplikacja frontendowa. 
+Aplikacja frontendowa wykorzystująca CRUD. 
 
 Korzysta z publicznego API użytkowników https://gorest.co.in/
 ![image](https://user-images.githubusercontent.com/62883259/194728448-6aca353a-798a-4ef5-84b0-4b4585ad4f26.png)
